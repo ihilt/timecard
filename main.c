@@ -134,7 +134,7 @@ int main(int argc, char **argv)
 {
 	int i, max;
 	int fd = open(argv[3], O_RDONLY);
-	double hours_worked;
+	double hours_worked = 0.0;
 	int begin = 0;
 	int end = 0;
 
