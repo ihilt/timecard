@@ -45,9 +45,10 @@ char *estrdup(char *s)
 }
 
 /* setprogname: set stored name of program */
-void setprogname(char *str)
+char *setprogname(char *str)
 {
 	name = estrdup(str);
+	return name;
 }
 
 /* emalloc: malloc and report if error */
