@@ -5,7 +5,7 @@
 #include <fcntl.h>
 #include "efunc.h"
 
-#define DATE_MAX_LEN (11)
+#define DATE_MAX_LEN (12)
 #define TIME_MAX_LEN (5)
 
 typedef struct nameval_t nameval_t;
