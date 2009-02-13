@@ -137,6 +137,9 @@ int main(int argc, char **argv)
 	double hours_worked = 0.0;
 	int begin = 0;
 	int end = 0;
+	const char *prgname;
+
+	prgname = setprogname("timecard");
 
 	if (fd < 0)
 		eprintf("No such file: %s", argv[3]);
@@ -153,6 +156,6 @@ int main(int argc, char **argv)
 		hours_worked += nvtab.nameval[i].hours;
 	printf("%.2f\n", hours_worked);
 	free(nvtab.nameval);
-
+	free((void *)prgname);
 	return 0;
 }

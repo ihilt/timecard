@@ -1,7 +1,7 @@
 OBJ=main.o efunc.o
 SRC=main.c efunc.c
 
-CFLAGS=-g -Wall
+CFLAGS=-O2 -g -Wall -Wwrite-strings
 
 timecard : main.o efunc.o
 	gcc -o $@ main.o efunc.o

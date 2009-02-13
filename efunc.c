@@ -5,16 +5,16 @@
 #include <errno.h>
 #include "efunc.h"
 
-static char *name = NULL;
+static const char *name = NULL;
 
 /* progname: return stored name of program */
-char *progname(void)
+static const char *progname(void)
 {
 	return name;
 }
 
 /* eprintf: print error message and exit */
-void eprintf(char *fmt, ...)
+void eprintf(const char *fmt, ...)
 {
 	va_list args;
 
@@ -33,7 +33,7 @@ void eprintf(char *fmt, ...)
 }
 
 /* estrdup: duplicate a string, report if error */
-char *estrdup(char *s)
+const char *estrdup(const char *s)
 {
 	char *t;
 
@@ -45,7 +45,7 @@ char *estrdup(char *s)
 }
 
 /* setprogname: set stored name of program */
-char *setprogname(char *str)
+const char *setprogname(const char *str)
 {
 	name = estrdup(str);
 	return name;
