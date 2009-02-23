@@ -8,11 +8,5 @@ struct nameval_t {
 	double hours;
 };
 
-struct nvtab_t {
-	int nval;
-	int max;
-	struct nameval_t *nameval;
-} nvtab;
-
 extern int addname(struct nameval_t newname);
 extern double get_hours_worked(char *begin_date, char *end_date, char *name);

@@ -5,6 +5,16 @@
 #include "efunc.h"
 #include "utils.h"
 
+static struct nvtab_t {
+	int nval;
+	int max;
+	struct nameval_t *nameval;
+} nvtab;
+
+static double time_to_hours(char *time);
+static int get_time(FILE *fin);
+static int build_timecard(FILE *fin);
+
 int addname(struct nameval_t newname)
 {
 	struct nameval_t *nvp;
