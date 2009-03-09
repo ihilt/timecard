@@ -60,6 +60,18 @@ static double time_to_hours(char *time)
 	return seconds/3600;
 }
 
+/* skip:  advance to next non-whitespace character */
+static int skip(FILE *fin)
+{
+	int c;
+
+	do {
+		c = fgetc(fin);
+	} while (isspace(c));
+	ungetc(c, fin);
+	return 0;
+}
+
 static int get_time(FILE *fin)
 {
 	struct nameval_t t;
@@ -69,6 +81,7 @@ static int get_time(FILE *fin)
 	int i;
 	int c;
 
+	skip(fin);
 	for (i = 0; (c = fgetc(fin)) != EOF && !isspace(c); i++)
 		date[i] = c;
 	date[i] = '\0';
