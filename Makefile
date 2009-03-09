@@ -11,8 +11,8 @@ utils.o : efunc.h utils.h
 clean :
 	rm -f $(OBJ)
 test : timecard
-	@./timecard 29-Dec-2008 31-Dec-2008 timecard.txt
+	@./timecard 2009-02-16 2009-02-26 timecard.txt
 valgrind : timecard
-	@valgrind ./timecard 01-Jan-2008 31-Dec-2008 timecard.txt
+	@valgrind ./timecard 2009-02-23 2009-02-26 timecard.txt
 sparse :
 	@sparse $(SRC)
