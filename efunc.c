@@ -44,8 +44,8 @@ const char *estrdup(const char *s)
 	return t;
 }
 
-/* setprogname: set stored name of program */
-const char *setprogname(const char *str)
+/* esetprogname: set stored name of program */
+const char *esetprogname(const char *str)
 {
 	name = estrdup(str);
 	return name;

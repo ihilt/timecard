@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 
 	const char *prgname;
 
-	prgname = setprogname("timecard");
+	prgname = esetprogname("timecard");
 
 	if (fd < 0)
 		eprintf("No such file: %s", argv[3]);
